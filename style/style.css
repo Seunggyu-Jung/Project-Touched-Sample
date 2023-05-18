@@ -31,6 +31,8 @@ header {
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+
+    position: relative;
 }
 
 .art1 {
@@ -39,4 +41,30 @@ header {
 
 .art2 {
     margin-left: 50px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.img.clicked{
+    transform: rotateY(180deg);
+    transition: 1s;
+}
+
+.img-msg {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+    position: absolute;
+    top: 30%;
+    right: 0;
+
+    display: none;
+}
+
+.img-msg.active{
+    display: block;
 }
