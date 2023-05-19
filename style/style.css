@@ -21,7 +21,8 @@ header {
 }
 
 .art1,
-.art2 {
+.art2,
+.art3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +36,8 @@ header {
     position: relative;
 }
 
-.art1 {
+.art1,
+.art3 {
     margin-right: 50px;
 }
 
@@ -48,23 +50,52 @@ img:hover {
     transition: 0.5s;
 }
 
-.img.clicked{
+
+
+.img.clicked,
+.img2.clicked,
+.img3.clicked{
     transform: rotateY(180deg);
     transition: 1s;
 }
 
-.img-msg {
+
+
+.img-msg,
+.img-msg2,
+.img-msg3 {
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+    background-color: salmon;
+
 
     position: absolute;
     top: 30%;
     right: 0;
+    z-index: 100;
 
     display: none;
 }
 
-.img-msg.active{
+
+.img-msg.active,
+.img-msg2.active,
+.img-msg3.active {
     display: block;
+}
+
+.img-msg.active + .dim {
+    display: block;
+    
+}
+
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
 }
