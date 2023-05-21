@@ -11,6 +11,7 @@ input{
     padding: 0;
 }
 
+
 .l-wrap {
     max-width: 760px;
     margin: 30px auto;
@@ -35,6 +36,12 @@ header {
 
     position: relative;
 }
+
+/* .img, 
+.img2,
+.img3 {
+    position: relative;
+} */
 
 .art1,
 .art3 {
@@ -85,7 +92,9 @@ img:hover {
     display: block;
 }
 
-.img-msg.active + .dim {
+.img-msg.active + .dim,
+.img-msg2.active + .dim,
+.img-msg3.active + .dim {
     display: block;
     
 }
@@ -98,4 +107,38 @@ img:hover {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     display: none;
+}
+
+@media (max-width: 720px) {
+    .art1,
+    .art2,
+    .art3 {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .img-msg,
+    .img-msg3 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+
+    .img-msg2{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    .art1,
+    .art3 {
+    margin-right: 0;
+    }
+
+    .art2 {
+        margin-left: 0;
+    }
+
+    
+
 }
