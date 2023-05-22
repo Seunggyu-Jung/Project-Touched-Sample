@@ -49,35 +49,23 @@ btnClose.addEventListener("click", closepopup);
 btnClose2.addEventListener("click", closepopup2);
 btnClose3.addEventListener("click", closepopup3);
 
-// // YouTube IFrame API를 로드합니다.
-// var tag = document.querySelector('script');
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// var player;
 
-// // YouTube 플레이어를 생성하고 설정합니다.
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player('player', {
-//     height: '0',
-//     width: '0',
-//     videoId: 'PsZtGZJS7Eg',
-//     events: {
-//       'onReady': onPlayerReady
-//     },
-//     playerVars: {
-//       'autoplay': 1,
-//       'loop': 1,
-//       'controls': 0,
-//       'showinfo': 0,
-//       'autohide': 1,
-//       'playlist': 'PsZtGZJS7Eg'
-//     }
-//   });
-// }
+    var btn = document.querySelector(".btn");
+    var audioElement = document.querySelector("audio");
+    var isPlaying = true; // 재생 상태를 추적하는 변수
 
-// // 플레이어가 준비되면 재생을 시작합니다.
-// function onPlayerReady(event) {
-//   event.target.playVideo();
-// }
+    btn.addEventListener('click', () => {
+      if(isPlaying) {
+        audioElement.pause();
+        isPlaying = false;
+        btn.textContent = "재생";
+      } else {
+        audioElement.play(); // 재생
+        isPlaying = true;
+        btn.textContent = "일시정지";
+      }
+    });
+    // 음성 플레이어 제어
+    // audioElement.pause(); // 일시 정지
+    // audioElement.volume = 0.5; // 볼륨 설정 등

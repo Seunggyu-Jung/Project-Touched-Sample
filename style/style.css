@@ -96,8 +96,10 @@ img:hover {
 .img-msg2.active + .dim,
 .img-msg3.active + .dim {
     display: block;
-    
+    z-index: 99;
 }
+
+
 
 .dim {
     position: fixed;
