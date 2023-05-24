@@ -51,6 +51,7 @@ btnClose3.addEventListener("click", closepopup3);
 
 
 
+// 음악 자동 재생 및 멈춤 버튼
     var btn = document.querySelector(".btn");
     var audioElement = document.querySelector("audio");
     var isPlaying = true; // 재생 상태를 추적하는 변수
