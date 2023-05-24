@@ -11,6 +11,10 @@ input{
     padding: 0;
 }
 
+/* body {
+    background: url(../편지지\ 3.avif) no-repeat center center / contain;
+} */
+
 
 .l-wrap {
     max-width: 760px;
@@ -109,6 +113,66 @@ img:hover {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     display: none;
+}
+
+
+.gallery {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.photo-grid {
+    display: grid;
+      grid-template-areas:
+        "a a b b"
+        "a a b b"
+        "c c d d"
+        "c c d d";
+        gap : 10px 20px;
+    justify-items: center;
+    align-items: center;
+    
+
+    }
+
+
+.a1 {
+    
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    grid-area: a;
+}
+
+.b2 {
+    
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    grid-area: b;
+}
+
+.c3 {
+    
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    grid-area: c;
+}
+
+.d4 {
+    
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    grid-area: d;
 }
 
 @media (max-width: 720px) {
