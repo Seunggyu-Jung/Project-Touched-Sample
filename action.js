@@ -1,3 +1,6 @@
+const dog = document.querySelector(".top-dog");
+const talk = document.querySelector(".speak");
+const clickedDog = document.querySelector(".top-dog.clicked");
 const image = document.querySelector(".img");
 const image2 = document.querySelector(".img2");
 const image3 = document.querySelector(".img3");
@@ -8,6 +11,24 @@ const btnClose = document.querySelector(".btn-close");
 const btnClose2 = document.querySelector(".btn-close2");
 const btnClose3 = document.querySelector(".btn-close3");
 const dim = document.querySelector(".dim");
+
+
+
+
+function dogSpeak() {
+    const randomSpeak = function () {
+        const speak = ["멍멍!! 사랑해요!", "멍멍!! 놀아줘요!", "멍멍!! 안아줘요!", "멍멍!! 항상 고마워요!" , "멍멍!! 앞으로도 잘 부탁해요!", "멍멍!!"];
+            
+            return speak[parseInt(Math.random() * 6)]
+            
+    }
+    talk.textContent = randomSpeak();
+}
+
+
+
+
+
 
 
 function openpopup(){
@@ -42,6 +63,8 @@ function closepopup3(){
     image3.classList.remove("clicked");
 }
 
+
+dog.addEventListener("click", dogSpeak);
 image.addEventListener("click", openpopup);
 image2.addEventListener("click", openpopup2);
 image3.addEventListener("click", openpopup3);

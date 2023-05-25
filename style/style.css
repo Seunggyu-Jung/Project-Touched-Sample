@@ -16,6 +16,34 @@ input{
 } */
 
 
+.top-section{
+    display: flex;
+    align-items: center;
+    margin: -50px auto 0;
+}
+
+.top-dog{
+    display: block;
+    width: 60%;
+    height: 60%;
+    /* margin: auto; */
+}
+
+.speak {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 24px;
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
 .l-wrap {
     max-width: 760px;
     margin: 30px auto;
