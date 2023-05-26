@@ -11,9 +11,10 @@ input{
     padding: 0;
 }
 
-/* body {
-    background: url(../편지지\ 3.avif) no-repeat center center / contain;
-} */
+body {
+    background: linear-gradient(to bottom, #FFC0CB ,salmon);
+    
+}
 
 
 .top-section{
@@ -29,16 +30,43 @@ input{
     /* margin: auto; */
 }
 
-.speak {
+.text-box{
     margin-top: 10px;
     margin-left: 20px;
-    padding: 10px;
-    border: 1px solid black;
     border-radius: 20px;
-    font-size: 24px;
     flex-grow: 1;
-    width: 100px;
-    height: 100px;
+    position: relative;
+    background-color: #ffff;
+}
+
+.speak {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+
+}
+
+.text-box::after {
+    border-top: 50px solid #ffff;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: -6%;
+    transform: translateY(10px); 
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    background-color: salmon;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -50,6 +78,7 @@ input{
 }
 
 header {
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -59,9 +88,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid black;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
@@ -69,20 +98,46 @@ header {
     position: relative;
 }
 
-/* .img, 
-.img2,
-.img3 {
-    position: relative;
-} */
 
 .art1,
 .art3 {
+    background: url(../img/bright-background.jpg) no-repeat center center/ cover;
     margin-right: 50px;
 }
 
 .art2 {
     margin-left: 50px;
+    background: url(../img/old-background.jpg) no-repeat center center/ cover;
 }
+
+
+.art1::before {
+    content: "";
+    background: url(../img/Fson.png) no-repeat center /  contain;
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    top: -120px;
+    left: -20px;
+}
+
+.art2::before {
+    content: "";
+    background: url(../img/Fdaugther.png) no-repeat center / contain;
+    width: 250px;
+    height: 250px;
+
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+
+
+.content-box {
+    padding: 15px;
+}
+
 
 img:hover {
     transform: scale(1.1);
@@ -148,6 +203,7 @@ img:hover {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
+    
 }
 
 .gallery h2 {
@@ -159,10 +215,10 @@ img:hover {
 .photo-grid {
     display: grid;
       grid-template-areas:
-        "a a b b"
-        "a a b b"
-        "c c d d"
-        "c c d d";
+        "a a  b b "
+        " a a  b b "
+        " c c  d d "
+        " c c  d d ";
         gap : 10px 20px;
     justify-items: center;
     align-items: center;
@@ -177,7 +233,12 @@ img:hover {
     height: 90%;
     object-fit: contain;
     grid-area: a;
+    position: relative;
+
+    
 }
+
+
 
 .b2 {
     
@@ -202,6 +263,27 @@ img:hover {
     object-fit: contain;
     grid-area: d;
 }
+
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: aqua; 
+    color: black; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 12px; 
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
 
 @media (max-width: 720px) {
     .art1,
@@ -235,4 +317,22 @@ img:hover {
 
     
 
+}
+
+@media (max-width: 500px) {
+    .text-box::after {
+        
+        top: 30%;
+        right: -30%;
+        transform: translateY(10px); 
+    }
+}
+
+@media (max-width: 370px) {
+    .text-box::after {
+        
+        top: 30%;
+        right: -40%;
+        transform: translateY(10px); 
+    }
 }

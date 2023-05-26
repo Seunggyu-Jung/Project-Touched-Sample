@@ -13,8 +13,6 @@ const btnClose3 = document.querySelector(".btn-close3");
 const dim = document.querySelector(".dim");
 
 
-
-
 function dogSpeak() {
     const randomSpeak = function () {
         const speak = ["멍멍!! 사랑해요!", "멍멍!! 놀아줘요!", "멍멍!! 안아줘요!", "멍멍!! 항상 고마워요!" , "멍멍!! 앞으로도 잘 부탁해요!", "멍멍!!"];
@@ -24,11 +22,6 @@ function dogSpeak() {
     }
     talk.textContent = randomSpeak();
 }
-
-
-
-
-
 
 
 function openpopup(){
@@ -93,3 +86,23 @@ btnClose3.addEventListener("click", closepopup3);
     // 음성 플레이어 제어
     // audioElement.pause(); // 일시 정지
     // audioElement.volume = 0.5; // 볼륨 설정 등
+
+
+// 맨 위로 올라가기 버튼
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
