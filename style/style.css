@@ -12,8 +12,8 @@ input{
 }
 
 body {
-    background: linear-gradient(to bottom, #FFC0CB ,salmon);
-    
+    background: linear-gradient(to bottom, #FFC0CB , #FFA500);
+    word-break: keep-all;
 }
 
 
@@ -80,6 +80,26 @@ body {
 header {
     margin-top: 100px;
     text-align: center;
+}
+
+.title {
+    border-radius: 10px;
+    font-size: 36px;
+    padding: 10px;
+    background-color: aliceblue;
+
+}
+
+.guide-line {
+    text-align: left;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #FFC0CB;
+}
+
+.guide-line p {
+    margin-left: 20px;
+    font-size: 28px;
 }
 
 .art1,
