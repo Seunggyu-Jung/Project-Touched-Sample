@@ -1,3 +1,5 @@
+
+// querySelectorAll 을 사용하시면 더 편하실 것입니다.
 const dog = document.querySelector(".top-dog");
 const talk = document.querySelector(".speak");
 const clickedDog = document.querySelector(".top-dog.clicked");
@@ -13,6 +15,8 @@ const btnClose3 = document.querySelector(".btn-close3");
 const dim = document.querySelector(".dim");
 
 
+
+// 홈페이지 상단에 있는 말풍선 대사 출력 함수입니다. 배열안에 원하시는 대사를 입력하시면 랜덤으로 출력합니다!
 function dogSpeak() {
     const randomSpeak = function () {
         const speak = ["멍멍!! 사랑해요!", "멍멍!! 놀아줘요!", "멍멍!! 안아줘요!", "멍멍!! 항상 고마워요!" , "멍멍!! 앞으로도 잘 부탁해요!", "멍멍!!"];
@@ -24,6 +28,8 @@ function dogSpeak() {
 }
 
 
+
+// 편지 아티클을 클릭하면 열리는 팝업 함수
 function openpopup(){
     image.classList.add("clicked");
     text.classList.add("active");
@@ -40,7 +46,7 @@ function openpopup3(){
 }
 
 
-
+// 팝업창을 닫고, 사진을 원래대로 되돌리는 닫기 버튼 함수
 function closepopup(){
     text.classList.remove("active");
     image.classList.remove("clicked");
@@ -57,6 +63,8 @@ function closepopup3(){
 }
 
 
+
+// 클릭하면 발생하는 이벤트 목록입니다.
 dog.addEventListener("click", dogSpeak);
 image.addEventListener("click", openpopup);
 image2.addEventListener("click", openpopup2);

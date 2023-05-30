@@ -1,3 +1,4 @@
+/* reset css */
 h1,
 h2,
 h3,
@@ -11,11 +12,25 @@ input{
     padding: 0;
 }
 
+
+/* layout */
 body {
     background: linear-gradient(to bottom, #FFC0CB , #FFA500);
     word-break: keep-all;
 }
 
+.l-wrap {
+    max-width: 760px;
+    margin: 30px auto;
+}
+
+header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+/* 최상단 이벤트 파트 */
 
 .top-section{
     display: flex;
@@ -27,9 +42,9 @@ body {
     display: block;
     width: 60%;
     height: 60%;
-    /* margin: auto; */
 }
 
+/* 말풍선 속성입니다. */
 .text-box{
     margin-top: 10px;
     margin-left: 20px;
@@ -43,9 +58,9 @@ body {
     text-align: center;
     padding: 10px;
     font-size: 24px;
-
 }
 
+/* 말풍선 꼬리역할을 하는 가상요소입니다. */
 .text-box::after {
     border-top: 50px solid #ffff;
     border-left: 0px solid transparent;
@@ -55,13 +70,13 @@ body {
     content: "";
     position: absolute;
     top: 20%;
-    right: -6%;
+    right: -15%;
     transform: translateY(10px); 
 }
 
 .btn {
     display: block;
-    margin: auto;
+    margin: auto auto 100px;
     background-color: salmon;
     border: 0;
     cursor: pointer;
@@ -72,15 +87,7 @@ body {
 
 
 
-.l-wrap {
-    max-width: 760px;
-    margin: 30px auto;
-}
-
-header {
-    margin-top: 100px;
-    text-align: center;
-}
+/* 편지파트 header */
 
 .title {
     border-radius: 10px;
@@ -102,6 +109,12 @@ header {
     font-size: 28px;
 }
 
+
+
+/* 편지파트 main */
+
+
+/* main article */
 .art1,
 .art2,
 .art3 {
@@ -131,6 +144,7 @@ header {
 }
 
 
+/* 첫번째 편지지 아티클의 상단에 붙는 가상요소입니다. */
 .art1::before {
     content: "";
     background: url(../img/Fson.png) no-repeat center /  contain;
@@ -142,6 +156,8 @@ header {
     left: -20px;
 }
 
+
+/* 두번째 편지지 아티클의 상단에 붙는 가상요소입니다. */
 .art2::before {
     content: "";
     background: url(../img/Fdaugther.png) no-repeat center / contain;
@@ -159,13 +175,14 @@ header {
 }
 
 
+/* 이미지를 호버하면 확대  */
 img:hover {
     transform: scale(1.1);
     transition: 0.5s;
 }
 
 
-
+/* 아티클 내의 이미지를 클릭되면 생길 이미지 이벤트 */
 .img.clicked,
 .img2.clicked,
 .img3.clicked{
@@ -174,7 +191,7 @@ img:hover {
 }
 
 
-
+/* 아티클 내의 이미지를 클릭하면 나타날 팝업창 */
 .img-msg,
 .img-msg2,
 .img-msg3 {
@@ -207,7 +224,7 @@ img:hover {
 }
 
 
-
+/* 팝업창이 생기면 가려지는 전체 배경 */
 .dim {
     position: fixed;
     top: 0;
@@ -219,11 +236,11 @@ img:hover {
 }
 
 
+/* main의 갤러리 */
 .gallery {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    
 }
 
 .gallery h2 {
@@ -232,6 +249,8 @@ img:hover {
     margin-bottom: 30px;
 }
 
+
+/*갤러리는 grid로 짜봤지만, flex로 짜셔도 무관하고, template-area를 안쓰시는게 더 좋을 것 같긴 합니다. */
 .photo-grid {
     display: grid;
       grid-template-areas:
@@ -242,49 +261,37 @@ img:hover {
         gap : 10px 20px;
     justify-items: center;
     align-items: center;
-    
+    }
 
+/* 갤러리 사진에 들어가는 속성입니다. */
+    .a1,
+    .b2,
+    .c3,
+    .d4 {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
     }
 
 
 .a1 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: a;
-    position: relative;
-
-    
 }
 
-
-
 .b2 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: b;
 }
 
 .c3 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: c;
 }
 
 .d4 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: d;
 }
 
 
+/* 페이지 맨위로 이동하는 버튼 속성입니다. 여기에 애니메이션 효과를 넣고 싶으시면 javascript로 작업하시면 됩니다. */
 #myBtn {
     display: none; 
     position: fixed; 
@@ -304,6 +311,10 @@ img:hover {
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+
+
+  /* 반응형입니다. 이 비율이면 어지간한 스마트폰에서 작동할 것입니다. */
 
 @media (max-width: 720px) {
     .art1,
